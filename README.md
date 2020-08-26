@@ -1,5 +1,7 @@
 # Credit-card-fraud
 
+## Background
+
 It is important that credit card companies are able to recognize fraudulent credit card transactions
 so that customers are not charged for items that they did not purchase.
 
@@ -7,7 +9,9 @@ The original data set comes from Kaggle: https://www.kaggle.com/mlg-ulb/creditca
 This dataset presents transactions that occurred in two days
 The original dataset contains roughly 280K observations. I have simplified down to roughly 3000 observations. The aim of this project is to compare a few ML models and compare..
 
-The dataset contains only numerical input variables which are the result of a PCA transformation. The original features and background information about the data is not available due to confidentialy issues. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'.
+## Introduction
+
+The dataset contains only numerical input variables which are the result of a PCA transformation.  Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'.
 Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
 In this project, we will fit and compare the following 5 classification models to predict credit card fraud or not:
@@ -17,6 +21,8 @@ Decision Tree <br>
 Bagged Trees <br/>
 Random Forest <br/>
 Boosted Trees<br/>
+
+The dataset is highly imbalanced, hence accuracy is not a good metric to evaluate the performance. We will use F1-score as the evaluation metric. ROC curve and AUC score is used to compare multiple classification algorithms.
 
 **Result**
 

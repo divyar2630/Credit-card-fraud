@@ -1,4 +1,4 @@
-# Credit-card-fraud
+# Credit-card-fraud-detection
 
 ## Background
 
